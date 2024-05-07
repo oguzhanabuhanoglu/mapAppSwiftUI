@@ -34,6 +34,7 @@ struct LocationListView: View {
 
 extension LocationListView {
     
+    //locationa burada erişmek için bu viewı fonksiyondan döndürmemiz gerekti
     private func listRowView(location: Location) -> some View{
         
         HStack{
