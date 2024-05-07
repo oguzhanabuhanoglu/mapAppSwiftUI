@@ -86,6 +86,7 @@ extension LocationPreviewView {
     private var nextButton: some View {
         Button {
             // change currentLocation
+            
         } label: {
             Text("Next")
                 .font(.headline)

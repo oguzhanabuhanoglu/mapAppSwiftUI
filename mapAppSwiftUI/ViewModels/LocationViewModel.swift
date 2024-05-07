@@ -49,7 +49,10 @@ class LocationViewModel: ObservableObject {
     }
     
     func showNextLocation(location: Location) {
-        currentLocation = location
-        showLocationListView = false
+        withAnimation(.easeInOut) {
+            currentLocation = location
+            showLocationListView = false
+        }
+        
     }
 }
