@@ -11,6 +11,8 @@ struct LocationPreviewView: View {
     
     let location: Location
     
+    @EnvironmentObject private var vm: LocationViewModel
+    
     var body: some View {
         
         HStack(alignment: .bottom, spacing: 0){
@@ -86,7 +88,7 @@ extension LocationPreviewView {
     private var nextButton: some View {
         Button {
             // change currentLocation
-            
+            vm.nextButtonClicked()
         } label: {
             Text("Next")
                 .font(.headline)

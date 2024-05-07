@@ -53,6 +53,29 @@ class LocationViewModel: ObservableObject {
             currentLocation = location
             showLocationListView = false
         }
-        
     }
+    
+
+    // i dont have next location on preview view so i need to react to next locatiın manuallt in here
+    func nextButtonClicked() {
+        guard let currentIndex = locations.firstIndex(where: { $0 == currentLocation }) else {
+            return
+        }
+        
+        //check if the nextIndex is valid
+        let nextIndex = currentIndex + 1
+        guard locations.indices.contains(nextIndex) else {
+            //next index is not valid
+            //restart from 0
+            guard let firstLocation = locations.first else { 
+                return
+            }
+            showNextLocation(location: firstLocation)
+            return
+        }
+        
+        let nextLocation = locations[nextIndex]
+        showNextLocation(location: nextLocation)
+    }
+    
 }
