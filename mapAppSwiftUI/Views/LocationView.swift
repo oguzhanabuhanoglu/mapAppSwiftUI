@@ -17,6 +17,15 @@ struct LocationView: View {
         ZStack {
             Map(coordinateRegion: $vm.mapRegion)
                 .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                
+                header
+                    .padding()
+                
+                Spacer()
+            }
+           
         }
             
         
@@ -30,4 +39,37 @@ struct LocationView: View {
 #Preview {
     LocationView()
         .environmentObject(LocationViewModel())
+}
+
+extension LocationView {
+    
+    private var header: some View {
+        
+            VStack {
+                Button(action: vm.toggleLocationList, label: {
+                    Text(vm.currentLocation.name + ", " + vm.currentLocation.cityName)
+                        .font(.title2)
+                        .fontWeight(.black)
+                        .foregroundColor(.primary)
+                        .frame(height: 55)
+                        .frame(maxWidth: .infinity)
+                        .overlay(alignment: .leading) {
+                            Image(systemName: "arrow.down")
+                                .font(.headline)
+                                .foregroundColor(.primary)
+                                .padding()
+                                .rotationEffect(Angle(degrees: vm.showLocationListView ? 180 : 0))
+                        }
+                })
+                
+                if vm.showLocationListView {
+                    LocationListView()
+                }
+                
+            }
+            .background(.thickMaterial)
+            .cornerRadius(10)
+            .shadow(color: .black.opacity(0.3), radius: 20,x: 0 , y: 15)
+        
+    }
 }
