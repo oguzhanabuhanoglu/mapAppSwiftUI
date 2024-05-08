@@ -18,6 +18,7 @@
 		BFE9F8CB2BEA48700094CA5C /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F8CA2BEA48700094CA5C /* LocationListView.swift */; };
 		BFE9F8CD2BEA80840094CA5C /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F8CC2BEA80840094CA5C /* LocationPreviewView.swift */; };
 		BFE9F8CF2BEBA4570094CA5C /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F8CE2BEBA4570094CA5C /* LocationMapAnnotationView.swift */; };
+		BFE9F8D12BEBB05C0094CA5C /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F8D02BEBB05C0094CA5C /* LocationDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		BFE9F8CA2BEA48700094CA5C /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		BFE9F8CC2BEA80840094CA5C /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		BFE9F8CE2BEBA4570094CA5C /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
+		BFE9F8D02BEBB05C0094CA5C /* LocationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				BFE9F8CA2BEA48700094CA5C /* LocationListView.swift */,
 				BFE9F8CC2BEA80840094CA5C /* LocationPreviewView.swift */,
 				BFE9F8CE2BEBA4570094CA5C /* LocationMapAnnotationView.swift */,
+				BFE9F8D02BEBB05C0094CA5C /* LocationDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE9F8D12BEBB05C0094CA5C /* LocationDetailsView.swift in Sources */,
 				BF8F96612BEA27380070A9DD /* LocationsDataService.swift in Sources */,
 				BFE9F8CF2BEBA4570094CA5C /* LocationMapAnnotationView.swift in Sources */,
 				BFE9F8C92BEA31F90094CA5C /* LocationViewModel.swift in Sources */,
